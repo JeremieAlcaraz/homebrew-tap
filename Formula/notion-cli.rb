@@ -5,23 +5,23 @@
 class NotionCli < Formula
   desc "Notion CLI for humans and AI agents — optimized token consumption."
   homepage "https://github.com/JeremieAlcaraz/notion-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   depends_on "gum" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.1.0/notion-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "5a24454601ea862cbcc146cbcba71ecdfe89929bef601d2e7aaf3bd33497c347"
+      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.2.0/notion-cli_0.2.0_darwin_amd64.tar.gz"
+      sha256 "24f09f021179df525e5a6208b69c4891a4da3da1ae1f3b12ea6bef63a429321b"
 
       define_method(:install) do
         bin.install "notion"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.1.0/notion-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ba6a7b6373c93f4bf2e673057baf10ebd5eb5fa6a2328563aabf9cda1124130a"
+      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.2.0/notion-cli_0.2.0_darwin_arm64.tar.gz"
+      sha256 "26d1ddbb93a78693c760d67bbc75deea19e4d0dc1a871bec195181314a452b3a"
 
       define_method(:install) do
         bin.install "notion"
@@ -31,15 +31,15 @@ class NotionCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.1.0/notion-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "28e391655742bce2e6ce989b0901698757bb00188ed71deabeef364e50c9af58"
+      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.2.0/notion-cli_0.2.0_linux_amd64.tar.gz"
+      sha256 "5b5ffc12b706b53acd6fdc8dea34dd73e278c9bb2fcd51b50b95eee2b6042ce1"
       define_method(:install) do
         bin.install "notion"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.1.0/notion-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "119ab0afec58d4aada6102e58aa36b53c518a224e9d2878bea25507328c2bd76"
+      url "https://github.com/JeremieAlcaraz/notion-cli/releases/download/v0.2.0/notion-cli_0.2.0_linux_arm64.tar.gz"
+      sha256 "8baeaf8c54723503e170fa9919301a31ccd3ae65c1b0c6b2a8fe4f22df6f6f5a"
       define_method(:install) do
         bin.install "notion"
       end
